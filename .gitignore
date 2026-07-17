@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.ipynb_checkpoints/
+
+# Environments
+.env
+.venv
+env/
+venv/
+
+# Checkpoints and weights
+checkpoints/*.pth
+checkpoints/*.pt
+!checkpoints/README.md
+
+# Data
+data/raw/
+*.npy
+*.npz
+
+# External codebases placed locally
+third_party/DSCT/*
+!third_party/DSCT/README.md
+
+# OS / IDE
+.DS_Store
+.idea/
+.vscode/

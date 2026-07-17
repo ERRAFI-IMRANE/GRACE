@@ -1,0 +1,35 @@
+# Configuration for the DSCT facial stream.
+#
+# Values under `model:` are taken directly from the `args` used to
+# build the DSCT model in the original source file (dsct_complete_pipeline.py).
+# Paths under `paths:` are placeholders and must be set to match your
+# local setup.
+
+paths:
+  dsct_repo_path: "third_party/DSCT"        # local clone of the external DSCT codebase
+  ckpt_path: "checkpoints/facial/checkpoint-caer-s.pth"  # TODO
+  yolo18_pose_path: "checkpoints/preprocessing/yolo18.pt"  # TODO
+
+model:
+  dataset: "caer"              # from source
+  binary_flag: 0                # from source
+  num_queries: 9                # from source
+  backbone: "resnet50"          # from source
+  detr: "deformable_detr_dsct"           # from source
+  model_name: "deformable_transformer_dsct"  # from source
+  dec_n_sp: 0                    # from source
+  dec_n_sm: 0                    # from source
+  hidden_dim: 256                # from source
+  nheads: 8                      # from source
+  enc_layers: 6                  # from source
+  dec_layers: 6                  # from source
+  dim_feedforward: 1024          # from source
+  dropout: 0.1                    # from source
+  num_feature_levels: 4          # from source
+  enc_n_points: 4                # from source
+  dec_n_points: 4                # from source
+  position_embedding: "sine"    # from source
+  masks: false                    # from source
+
+runtime:
+  device: "cuda"

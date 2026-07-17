@@ -1,0 +1,14 @@
+# Core dependencies for the GRACE skeleton and facial stream modules.
+#
+# The facial stream (grace/models/facial/dsct.py) additionally depends
+# on the external DSCT codebase placed under third_party/DSCT/, which
+# carries its own requirements (see third_party/DSCT/README.md) - these
+# are not duplicated here.
+
+torch>=2.0
+numpy>=1.23
+opencv-python>=4.8
+Pillow>=9.5
+ultralytics>=8.1
+PyYAML>=6.0
+scikit-learn>=1.3

@@ -1,0 +1,54 @@
+# Configuration for the InfoGCN skeleton stream.
+#
+# Values under `model:` marked "from source" reflect defaults found in
+# the original InfoGCN implementation this module was built from.
+# Values under `data:` and `train:` are placeholders and must be set to
+# match your local setup.
+
+model:
+  num_joints: 18            # from source: expects the YOLO18-Pose 18-joint layout
+  num_classes: 26            # BoLD: 26 discrete affect categories (multi-label)
+  in_channels: 2              # from source usage: (x, y) per joint; set to 3 if using confidence as a channel
+  base_hidden: 64            # from source
+
+  # Example 18-joint edge list (standard 17-point COCO layout + index 17
+  # as the interpolated neck/SSN joint from YOLO18-Pose). This is an
+  # EXAMPLE topology only - verify it matches your actual keypoint
+  # ordering before training.
+  pairs:
+    - [0, 1]   # nose - left_eye
+    - [0, 2]   # nose - right_eye
+    - [1, 3]   # left_eye - left_ear
+    - [2, 4]   # right_eye - right_ear
+    - [0, 17]  # nose - neck (interpolated SSN joint)
+    - [17, 5]  # neck - left_shoulder
+    - [17, 6]  # neck - right_shoulder
+    - [5, 7]   # left_shoulder - left_elbow
+    - [7, 9]   # left_elbow - left_wrist
+    - [6, 8]   # right_shoulder - right_elbow
+    - [8, 10]  # right_elbow - right_wrist
+    - [5, 11]  # left_shoulder - left_hip
+    - [6, 12]  # right_shoulder - right_hip
+    - [11, 12] # left_hip - right_hip
+    - [11, 13] # left_hip - left_knee
+    - [13, 15] # left_knee - left_ankle
+    - [12, 14] # right_hip - right_knee
+    - [14, 16] # right_knee - right_ankle
+
+data:
+  root: "path/to/BoLD"                              # TODO
+  labels_csv: "path/to/BoLD/annotations/train.csv"  # TODO
+  batch_size: 8                                       # TODO
+  num_workers: 4                                       # TODO
+
+train:
+  # No training loop or hyperparameters were present in the provided
+  # InfoGCN source file - all values below are placeholders only.
+  epochs: 100                  # TODO
+  learning_rate: 0.01         # TODO
+  lr_decay_factor: 0.1        # TODO
+  lr_decay_every: 45          # TODO
+  momentum: 0.9                # TODO
+  weight_decay: 0.0005          # TODO
+  checkpoint_dir: "checkpoints/skeleton"  # TODO
+  device: "cuda"
