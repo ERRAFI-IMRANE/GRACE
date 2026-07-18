@@ -75,7 +75,7 @@ GRACE/
 ## Installation
 
 ```bash
-git clone <this-repo-url>
+git clone https://github.com/ERRAFI-IMRANE/GRACE.git
 cd GRACE
 pip install -r requirements.txt
 ```
@@ -90,11 +90,24 @@ Both streams are trained and evaluated on the **Body Language Dataset
 (BoLD)**, a large-scale naturalistic video benchmark annotated across
 26 affect categories.
 
-[Download BoLD](DATASET_LINK_PLACEHOLDER)
+## Dataset
+
+Both streams are trained and evaluated on the **Body Language Dataset
+(BoLD)**, a large-scale naturalistic video benchmark annotated across
+26 affect categories.
+
+The dataset is mirrored as a password-protected archive. To request
+access, email **i.errafi32@uca.ac.ma** with the subject line
+`GRACE dataset access request` — you'll receive the download link and
+extraction password by reply.
 
 ## Pretrained weights
 
-[Download pretrained weights](WEIGHTS_LINK_PLACEHOLDER)
+Pretrained checkpoints for both streams are distributed as a
+password-protected archive. To request access, email
+**i.errafi32@uca.ac.ma** with the subject line
+`GRACE weights access request` — you'll receive the download link and
+extraction password by reply.
 
 Place downloaded checkpoint files under `checkpoints/`.
 
