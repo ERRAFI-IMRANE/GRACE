@@ -13,7 +13,7 @@ on a Deformable-Transformer-based DSCT model with a ResNet-50 backbone.
 
 ## Architecture overview
 
-![Skeleton and facial stream diagrams](assets/figures/streams_placeholder.png)
+![Skeleton and facial stream diagrams](assets/figures/streams_placeholder.jpg)
 
 **Skeleton stream (`grace/models/skeleton/infogcn.py`)** — consumes
 normalized joint-coordinate sequences `(N, C, T, V)` extracted from a
