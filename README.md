@@ -1,6 +1,6 @@
 # GRACE: Graph-Residual Affective Computing Engine
 
-![GRACE overview](assets/figures/overview_placeholder.png)
+![GRACE overview](assets/figures/overview_placeholder.gif)
 
 GRACE is a non-verbal, video-based approach to stress and confidence
 assessment in academic settings. This repository contains the
